@@ -1,23 +1,28 @@
 import React, { Component } from 'react'
+import importedNames from '../names'
 
 export class SearchBar extends Component {
     constructor(props) {
         super(props)
     
         this.state = {
-            name: 'search names...',
+            names: importedNames
         }
     }
     render() {
         return (
             <div>
                 <h1>Name search:</h1>
+                <p>Matching names found: {this.state.names.length}</p>
                 <form>
-                    <label></label>
                     <input type="text" name='name' placeholder='search names...'>
                     </input>
                 </form>
-                <div>We will render names here</div>
+                <div style={{margin: 'auto'}}>
+                    {this.state.names.map(name => {
+                            return <p key={name}>{name}</p>
+                        })}
+                </div>
             </div>
         )
     }
