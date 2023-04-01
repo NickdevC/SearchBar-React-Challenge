@@ -1,13 +1,12 @@
 import logo from './logo.svg';
 import './App.css';
-// import FunctionalGreetingWithProps from './components/FunctionalGreetingWithProps';
-import StatefulGreeting from "./components/StatefulGreeting";
+import SearchBar from './components/SearchBar';
+
 
 function App() {
   return (
     <div className="App">
-      {/* <FunctionalGreetingWithProps greeting="Nice to meet you!" name="Nick" age="34" /> */}
-      <StatefulGreeting />
+      <SearchBar />
     </div>
   );
 }
